@@ -22,7 +22,7 @@ public class Usuario {
 	private String nombre;
 	private String apellido;
 	private int edad;
-	private Date nacimiento;
+	private Date fnacimiento;
 	private String email;
 	private String password;
     @Transient
@@ -82,11 +82,11 @@ public class Usuario {
 	}
 
 	public Date getNacimiento() {
-		return nacimiento;
+		return fnacimiento;
 	}
 
 	public void setNacimiento(Date nacimiento) {
-		this.nacimiento = nacimiento;
+		this.fnacimiento = nacimiento;
 	}
 
 	public String getEmail() {
