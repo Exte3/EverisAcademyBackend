@@ -27,6 +27,15 @@ public class Profesor extends Usuario{
 		this.grado_academico = grado_academico;
 		this.disponibilidad = disponibilidad;
 	}
+	
+	public Profesor(String nombre, String email, String password, String passwordconf, String grado_academico) {
+		super();
+		this.setNombre(nombre);
+		this.setEmail(email);
+		this.setPassword(password);
+		this.setPasswordConfirmation(passwordconf);
+		this.grado_academico= grado_academico;
+	}
 
 	public String getGrado_academico() {
 		return grado_academico;
