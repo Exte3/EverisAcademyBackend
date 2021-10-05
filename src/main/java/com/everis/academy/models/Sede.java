@@ -14,17 +14,15 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="administradores")
-public class Administrador{
+@Table(name="sedes")
+public class Sede {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	private String nombre;
-	private String apellido;
-	private String rut;
-	private String email;
+	private String direccion;
 	
 	@Column(updatable=false)
     @CreationTimestamp
@@ -34,17 +32,11 @@ public class Administrador{
     @UpdateTimestamp
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date updatedAt;
-    
-	public Administrador() {
-		super();
-	}
 
-	public Administrador(String nombre, String apellido, String rut, String email) {
+	public Sede(String nombre, String direccion) {
 		super();
 		this.nombre = nombre;
-		this.apellido = apellido;
-		this.rut = rut;
-		this.email = email;
+		this.direccion = direccion;
 	}
 
 	public Long getId() {
@@ -63,28 +55,12 @@ public class Administrador{
 		this.nombre = nombre;
 	}
 
-	public String getApellido() {
-		return apellido;
+	public String getDireccion() {
+		return direccion;
 	}
 
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
-	}
-
-	public String getRut() {
-		return rut;
-	}
-
-	public void setRut(String rut) {
-		this.rut = rut;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
 	}
 
 	public Date getCreatedAt() {
@@ -102,5 +78,6 @@ public class Administrador{
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-	
+    
+    
 }

@@ -19,7 +19,7 @@ public class Usuario {
 	@Id
     @GeneratedValue
     private Long id;
-	private String nombre;
+	protected String nombre;
 	private String apellido;
 	private int edad;
 	private Date nacimiento;

@@ -14,17 +14,16 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="administradores")
-public class Administrador{
+@Table(name="alumnos")
+public class Alumno  extends Usuario{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String nombre;
-	private String apellido;
-	private String rut;
-	private String email;
+	private String matricula;
+	private Date fechaIngreso;
+	private String carrera;
 	
 	@Column(updatable=false)
     @CreationTimestamp
@@ -35,16 +34,16 @@ public class Administrador{
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date updatedAt;
     
-	public Administrador() {
+    
+	public Alumno() {
 		super();
 	}
 
-	public Administrador(String nombre, String apellido, String rut, String email) {
+	public Alumno(String matricula, Date fechaIngreso, String carrera) {
 		super();
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.rut = rut;
-		this.email = email;
+		this.matricula = matricula;
+		this.fechaIngreso = fechaIngreso;
+		this.carrera = carrera;
 	}
 
 	public Long getId() {
@@ -55,36 +54,28 @@ public class Administrador{
 		this.id = id;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getMatricula() {
+		return matricula;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
 	}
 
-	public String getApellido() {
-		return apellido;
+	public Date getFechaIngreso() {
+		return fechaIngreso;
 	}
 
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
+	public void setFechaIngreso(Date fechaIngreso) {
+		this.fechaIngreso = fechaIngreso;
 	}
 
-	public String getRut() {
-		return rut;
+	public String getCarrera() {
+		return carrera;
 	}
 
-	public void setRut(String rut) {
-		this.rut = rut;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
+	public void setCarrera(String carrera) {
+		this.carrera = carrera;
 	}
 
 	public Date getCreatedAt() {
@@ -102,5 +93,5 @@ public class Administrador{
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-	
+		   
 }

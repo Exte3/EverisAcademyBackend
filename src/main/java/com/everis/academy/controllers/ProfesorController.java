@@ -9,5 +9,5 @@ import com.everis.academy.services.ProfesorService;
 public class ProfesorController {
 	@Autowired
 	ProfesorService profesorService;
-
+	
 }
