@@ -27,6 +27,8 @@ public class Usuario {
 	private String rut;
 	private String direccion;
 	private String password;
+	
+
     @Transient
     private String passwordConfirmation;
     
@@ -35,7 +37,9 @@ public class Usuario {
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date createdAt;
     
-    @UpdateTimestamp
+
+
+	@UpdateTimestamp
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date updatedAt;
 
@@ -106,6 +110,9 @@ public class Usuario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	
+
 
 	public String getPasswordConfirmation() {
 		return passwordConfirmation;

@@ -11,14 +11,10 @@ import org.springframework.stereotype.Service;
 import com.everis.academy.models.Profesor;
 import com.everis.academy.repositories.ProfesorRepository;
 
-
-
-
 @Service
 public class ProfesorService {
 	@Autowired
 	private ProfesorRepository profesorRepository;
-	
 	
 	public List<Profesor> findAll() {
 		// retorna una lista de usuarios
@@ -26,12 +22,12 @@ public class ProfesorService {
 	}
 	
 	
-	public Profesor buscarUsuario(Long id) {
+	public Profesor buscarProfesor(Long id) {
 
-		Optional<Profesor> oUsuario= profesorRepository.findById(id);
+		Optional<Profesor> oProfesor= profesorRepository.findById(id);
 		
-		if(oUsuario.isPresent()) {
-			return oUsuario.get();
+		if(oProfesor.isPresent()) {
+			return oProfesor.get();
 		}
 		
 		return null;
@@ -39,8 +35,15 @@ public class ProfesorService {
 	
 	
 	public Profesor insertarProfesor(@Valid Profesor profesor) {
-		// TODO Auto-generated method stub
+		//validacion datos profesor
+		
 		return profesorRepository.save(profesor);
+	}
+
+
+	public void eliminarProfesor(Long id) {
+		profesorRepository.deleteById(id);
+		
 	}
 	
 }
