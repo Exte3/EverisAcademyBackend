@@ -11,9 +11,6 @@ import org.springframework.stereotype.Service;
 import com.everis.academy.models.Profesor;
 import com.everis.academy.repositories.ProfesorRepository;
 
-
-
-
 @Service
 public class ProfesorService {
 	@Autowired
@@ -39,7 +36,8 @@ public class ProfesorService {
 	
 	
 	public Profesor insertarProfesor(@Valid Profesor profesor) {
-		// TODO Auto-generated method stub
+		//validacion datos profesor
+		
 		return profesorRepository.save(profesor);
 	}
 	
