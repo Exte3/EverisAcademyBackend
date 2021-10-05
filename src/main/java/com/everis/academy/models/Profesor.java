@@ -36,6 +36,10 @@ public class Profesor extends Usuario{
 		this.setPasswordConfirmation(passwordconf);
 		this.grado_academico= grado_academico;
 	}
+	
+	public Profesor() {
+		super();
+	}
 
 	public String getGrado_academico() {
 		return grado_academico;
