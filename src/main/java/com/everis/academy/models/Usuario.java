@@ -22,8 +22,10 @@ public class Usuario {
 	private String nombre;
 	private String apellido;
 	private int edad;
-	private Date fnacimiento;
+	private Date nacimiento;
 	private String email;
+	private String rut;
+	private String direccion;
 	private String password;
     @Transient
     private String passwordConfirmation;
@@ -82,11 +84,11 @@ public class Usuario {
 	}
 
 	public Date getNacimiento() {
-		return fnacimiento;
+		return nacimiento;
 	}
 
 	public void setNacimiento(Date nacimiento) {
-		this.fnacimiento = nacimiento;
+		this.nacimiento = nacimiento;
 	}
 
 	public String getEmail() {
@@ -127,6 +129,22 @@ public class Usuario {
 
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+
+	public String getRut() {
+		return rut;
+	}
+
+	public void setRut(String rut) {
+		this.rut = rut;
+	}
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
 	}
 
 	
