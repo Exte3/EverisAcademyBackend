@@ -24,6 +24,8 @@ public class Usuario {
 	private int edad;
 	private Date nacimiento;
 	private String email;
+	private String rut;
+	private String direccion;
 	private String password;
     @Transient
     private String passwordConfirmation;
@@ -127,6 +129,22 @@ public class Usuario {
 
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+
+	public String getRut() {
+		return rut;
+	}
+
+	public void setRut(String rut) {
+		this.rut = rut;
+	}
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
 	}
 
 	
