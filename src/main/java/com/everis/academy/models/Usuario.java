@@ -25,6 +25,8 @@ public class Usuario {
 	private Date fnacimiento;
 	private String email;
 	private String password;
+	private String token;
+
     @Transient
     private String passwordConfirmation;
     
@@ -33,7 +35,9 @@ public class Usuario {
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date createdAt;
     
-    @UpdateTimestamp
+
+
+	@UpdateTimestamp
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date updatedAt;
 
@@ -104,6 +108,17 @@ public class Usuario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	
+	//Seguridad 
+    public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
+	}
+	// FIN Seguridad 
 
 	public String getPasswordConfirmation() {
 		return passwordConfirmation;

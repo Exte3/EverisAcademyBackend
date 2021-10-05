@@ -29,6 +29,7 @@ public class ApiController {
 	//Api lista todos los profesores http://localhost:8080/api/profesores
 	@GetMapping("/profesores")
 	public List<Profesor> obtenerProfesores(){
+		System.out.println("lista profesores");
 		return profesorService.findAll();
 	}
 	
