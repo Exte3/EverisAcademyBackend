@@ -25,7 +25,7 @@ public class Usuario {
 	private Date fnacimiento;
 	private String email;
 	private String password;
-	private String token;
+	
 
     @Transient
     private String passwordConfirmation;
@@ -110,15 +110,7 @@ public class Usuario {
 	}
 	
 	
-	//Seguridad 
-    public String getToken() {
-		return token;
-	}
 
-	public void setToken(String token) {
-		this.token = token;
-	}
-	// FIN Seguridad 
 
 	public String getPasswordConfirmation() {
 		return passwordConfirmation;

@@ -21,7 +21,7 @@ import com.everis.academy.services.ProfesorService;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("api")
 public class ApiController {
 	
 	@Autowired
