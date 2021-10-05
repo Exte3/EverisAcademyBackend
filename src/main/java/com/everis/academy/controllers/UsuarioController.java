@@ -9,4 +9,6 @@ import com.everis.academy.services.UsuarioService;
 public class UsuarioController {
 	@Autowired
 	UsuarioService usuarioService;
+	
+	
 }
