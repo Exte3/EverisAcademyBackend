@@ -16,7 +16,6 @@ public class ProfesorService {
 	@Autowired
 	private ProfesorRepository profesorRepository;
 	
-	
 	public List<Profesor> findAll() {
 		// retorna una lista de usuarios
 		return profesorRepository.findAll();
@@ -39,6 +38,12 @@ public class ProfesorService {
 		//validacion datos profesor
 		
 		return profesorRepository.save(profesor);
+	}
+
+
+	public void eliminarProfesor(Long id) {
+		profesorRepository.deleteById(id);
+		
 	}
 	
 }
