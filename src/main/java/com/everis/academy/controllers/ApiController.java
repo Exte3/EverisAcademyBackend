@@ -27,6 +27,7 @@ public class ApiController {
 	@Autowired
 	private ProfesorService profesorService;
 	//Api lista todos los profesores http://localhost:8080/api/profesores
+	@CrossOrigin(origins = "http://localhost:4200") //server de Angular Front
 	@GetMapping("/profesores")
 	public List<Profesor> obtenerProfesores(){
 		System.out.println("lista profesores");
@@ -34,6 +35,7 @@ public class ApiController {
 	}
 	
 	//Api buscar profesor por su id http://localhost:8080/api/profesores/{id}
+	@CrossOrigin(origins = "http://localhost:4200") //server de Angular Front
 	@GetMapping("/profesores/{id}")
 	public Profesor obtenerProfesor(@PathVariable("id") Long id) {
 		Profesor profesor = profesorService.buscarProfesor(id);
