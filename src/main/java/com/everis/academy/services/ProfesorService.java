@@ -26,12 +26,12 @@ public class ProfesorService {
 	}
 	
 	
-	public Profesor buscarUsuario(Long id) {
+	public Profesor buscarProfesor(Long id) {
 
-		Optional<Profesor> oUsuario= profesorRepository.findById(id);
+		Optional<Profesor> oProfesor= profesorRepository.findById(id);
 		
-		if(oUsuario.isPresent()) {
-			return oUsuario.get();
+		if(oProfesor.isPresent()) {
+			return oProfesor.get();
 		}
 		
 		return null;

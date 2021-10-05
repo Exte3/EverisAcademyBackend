@@ -29,7 +29,7 @@ public class ApiController {
 	//Api buscar profesor por su id api/profesores/{id}
 	@GetMapping("/profesores/{id}")
 	public Profesor obtenerProfesor(@PathVariable("id") Long id) {
-		Profesor profesor = profesorService.buscarUsuario(id);
+		Profesor profesor = profesorService.buscarProfesor(id);
 		if(profesor == null) {
 			throw new RuntimeException("Producto no encontrado"+ id);
 		}
