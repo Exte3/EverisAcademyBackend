@@ -28,6 +28,8 @@ public class Usuario {
 	private String rut;
 	private String direccion;
 	private String password;
+	private String telefono;
+	private String sexo;
 	
 
     @Transient
@@ -153,6 +155,22 @@ public class Usuario {
 
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
+	}
+
+	public String getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+	public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
 	}
 
 }

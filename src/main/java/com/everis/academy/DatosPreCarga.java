@@ -9,7 +9,7 @@ import com.everis.academy.repositories.ProfesorRepository;
 
 @Configuration
 public class DatosPreCarga {	
-	
+	/*
 	@Bean
 	public CommandLineRunner cargaProfesores(ProfesorRepository profesorRepository) {
 		return (args -> {
@@ -25,5 +25,5 @@ public class DatosPreCarga {
 
 			System.out.println("email: "+ p1.getEmail()+"\n" + "Contraseña: "+p1.getPassword());
 		});
-	}	
+	}	*/
 }
