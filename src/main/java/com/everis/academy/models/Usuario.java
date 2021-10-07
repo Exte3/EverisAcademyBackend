@@ -22,8 +22,8 @@ public class Usuario {
 	private String nombre;
 	private String apellido;
 	private int edad;
-	@DateTimeFormat(pattern="yyyy-MM-dd")
-	private Date fnacimiento;
+	//@DateTimeFormat(pattern="yyyy-MM-dd")
+	private String fnacimiento;
 	private String email;
 	private String rut;
 	private String direccion;
@@ -90,11 +90,11 @@ public class Usuario {
 		this.edad = edad;
 	}
 
-	public Date getFnacimiento() {
+	public String getFnacimiento() {
 		return fnacimiento;
 	}
 
-	public void setFnacimiento(Date nacimiento) {
+	public void setFnacimiento(String nacimiento) {
 		this.fnacimiento = nacimiento;
 	}
 
@@ -114,9 +114,6 @@ public class Usuario {
 		this.password = password;
 	}
 	
-	
-
-
 	public String getPasswordConfirmation() {
 		return passwordConfirmation;
 	}
