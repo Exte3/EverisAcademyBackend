@@ -22,10 +22,8 @@ public class Usuario {
 	private String nombre;
 	private String apellido;
 	private int edad;
-	private Date nacimiento;
+	private Date fnacimiento;
 	private String email;
-	private String rut;
-	private String direccion;
 	private String password;
 	
 
@@ -88,11 +86,11 @@ public class Usuario {
 	}
 
 	public Date getNacimiento() {
-		return nacimiento;
+		return fnacimiento;
 	}
 
 	public void setNacimiento(Date nacimiento) {
-		this.nacimiento = nacimiento;
+		this.fnacimiento = nacimiento;
 	}
 
 	public String getEmail() {
@@ -138,21 +136,4 @@ public class Usuario {
 		this.updatedAt = updatedAt;
 	}
 
-	public String getRut() {
-		return rut;
-	}
-
-	public void setRut(String rut) {
-		this.rut = rut;
-	}
-
-	public String getDireccion() {
-		return direccion;
-	}
-
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
-	}
-
-	
 }

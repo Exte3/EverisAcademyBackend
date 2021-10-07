@@ -18,8 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.everis.academy.models.Profesor;
 import com.everis.academy.services.ProfesorService;
 
-
-
 @RestController
 @RequestMapping("api")
 public class ApiController {

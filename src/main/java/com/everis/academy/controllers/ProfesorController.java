@@ -8,6 +8,6 @@ import com.everis.academy.services.ProfesorService;
 @Controller
 public class ProfesorController {
 	@Autowired
-	ProfesorService profesorService;
+	private ProfesorService profesorService;
 
 }

@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 
 import com.everis.academy.models.Profesor;
 
-
 @Repository
 public interface ProfesorRepository extends JpaRepository<Profesor, Long>{
 	List<Profesor> findAll();
