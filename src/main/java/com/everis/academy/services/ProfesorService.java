@@ -35,8 +35,7 @@ public class ProfesorService {
 	
 	
 	public Profesor insertarProfesor(@Valid Profesor profesor) {
-		//validacion datos profesor
-		
+		//validacion datos profesor	
 		return profesorRepository.save(profesor);
 	}
 
