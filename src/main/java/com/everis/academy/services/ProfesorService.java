@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import javax.validation.Valid;
 
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -38,11 +39,39 @@ public class ProfesorService {
 		//validacion datos profesor	
 		return profesorRepository.save(profesor);
 	}
-
+	
+	public Profesor insertarProfesorpass(@Valid Profesor profesor) {
+		String hashed = BCrypt.hashpw(profesor.getPassword(), BCrypt.gensalt());
+		profesor.setPassword(hashed);
+		return profesorRepository.save(profesor);
+	}
+	public boolean validarProfesor(String email, String password) {
+		System.out.println(email);
+		Profesor profesor = profesorRepository.findByEmail(email);
+		if(profesor == null) {
+			System.out.println("El profesor es null");
+			return false;
+		}else {
+			if (BCrypt.checkpw(password, profesor.getPassword())) {
+				System.out.println("Password iguales");
+				return true;
+			}else {
+				System.out.println("Password distintos");
+				return false;
+			}
+		}
+		
+	}
 
 	public void eliminarProfesor(Long id) {
 		profesorRepository.deleteById(id);
 		
+	}
+
+
+	public Profesor findByEmail(String email) {
+		// TODO Auto-generated method stub
+		return profesorRepository.findByEmail(email);
 	}
 	
 }

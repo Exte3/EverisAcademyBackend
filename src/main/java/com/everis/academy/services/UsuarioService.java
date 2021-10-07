@@ -9,4 +9,6 @@ import com.everis.academy.repositories.UsuarioRepository;
 public class UsuarioService {
 	@Autowired
 	private UsuarioRepository usuarioRepository;
+	
+	
 }

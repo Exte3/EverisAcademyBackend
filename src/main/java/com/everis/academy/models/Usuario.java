@@ -27,13 +27,11 @@ public class Usuario {
 	private String email;
 	private String rut;
 	private String direccion;
-	private String password;
 	private String telefono;
 	private String sexo;
-	
-
-    @Transient
-    private String passwordConfirmation;
+	private String password;
+	@Transient
+	private String passwordConfirmation;
     
     @Column(updatable=false)
     @CreationTimestamp
