@@ -16,7 +16,25 @@ public class Profesor extends Usuario{
 	private String asignaturas;
 	private String disponibilidad;
 	private int anos_experiencia;
+	private String curriculum;
+	private String especialidad;
 	
+	public String getCurriculum() {
+		return curriculum;
+	}
+
+	public void setCurriculum(String curriculum) {
+		this.curriculum = curriculum;
+	}
+
+	public String getEspecialidad() {
+		return especialidad;
+	}
+
+	public void setEspecialidad(String especialidad) {
+		this.especialidad = especialidad;
+	}
+
 	@Column(updatable=false)
     @CreationTimestamp
     @DateTimeFormat(pattern="yyyy-MM-dd")

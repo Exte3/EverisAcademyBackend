@@ -24,6 +24,8 @@ public class Usuario {
 	private int edad;
 	private Date fnacimiento;
 	private String email;
+	private String rut;
+	private String direccion;
 	private String password;
 	
 
@@ -85,11 +87,11 @@ public class Usuario {
 		this.edad = edad;
 	}
 
-	public Date getNacimiento() {
+	public Date getFnacimiento() {
 		return fnacimiento;
 	}
 
-	public void setNacimiento(Date nacimiento) {
+	public void setFnacimiento(Date nacimiento) {
 		this.fnacimiento = nacimiento;
 	}
 
