@@ -22,6 +22,7 @@ public class Usuario {
 	private String nombre;
 	private String apellido;
 	private int edad;
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date fnacimiento;
 	private String email;
 	private String rut;
@@ -136,6 +137,22 @@ public class Usuario {
 
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+
+	public String getRut() {
+		return rut;
+	}
+
+	public void setRut(String rut) {
+		this.rut = rut;
+	}
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
 	}
 
 }
